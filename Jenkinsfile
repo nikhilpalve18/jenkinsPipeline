@@ -9,9 +9,14 @@ pipeline{
     }
     stages{
         stage("compile"){
+            when{
+                expression{
+                    
+                }
+            }
             steps{
                 sh "javac Test.java"
-                SH 'echo "${VERSION_NAME}"'
+                sh 'echo "${VERSION_NAME}"'
             }
         }
 
